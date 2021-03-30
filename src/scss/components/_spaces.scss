@@ -1,0 +1,152 @@
+.spaces {
+  margin-bottom: 112px;
+
+  @include mobile {
+    margin-bottom: 60px;
+  }
+
+  &__header {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    margin-right: -55px;
+    flex: 1 1 40%;
+    max-width: 40%;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color-gray2);
+
+    @include tablet {
+      max-width: 35%;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btns-block {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      align-self: flex-end;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--custom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 467px;
+    }
+  }
+
+  &__pic-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: fit-content;
+  }
+
+  &__item-btn {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+
+    &--custom {
+      bottom: 0;
+      width: 255px;
+
+      & span {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &__item-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.item-custom {
+  position: relative;
+  padding: 0 42px 0 55px;
+  height: 467px;
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  box-sizing: border-box;
+
+  &::before {
+    content: url("../img/lines.png");
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    opacity: 0.2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 55, 92, 0.3);
+    filter: blur(48px);
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41px;
+    text-align: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,94 @@
+.reviews {
+  margin-bottom: 112px;
+
+  &__header {
+    margin-bottom: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media all and (max-width: 470px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    max-width: 36%;
+
+    @include mobile {
+      max-width: 100%;
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    @media all and (max-width: 470px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btns-block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__slider {
+    padding-bottom: 32px;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  &__scrollbar {
+    bottom: -32px !important;
+  }
+
+  &__item {
+    padding: 47px 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 445px !important;
+    height: 393px;
+    color: var(--color-white);
+    background-color: var(--color-dark-blue);
+    box-sizing: border-box;
+
+    @media all and (max-width: 576px){
+      width: 100% !important;
+      padding: 20px;
+    }
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__user-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-avatar {
+    margin-right: 16px;
+  }
+
+  &__user-data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user-name {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  &__user-profession {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

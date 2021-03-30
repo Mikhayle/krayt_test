@@ -1,0 +1,68 @@
+.gallery {
+  margin-bottom: 112px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+  &__container {
+    position: relative;
+  }
+
+  &__header {
+    padding-left: 15  px;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    z-index: 3;
+    max-width: 50%;
+    align-self: flex-end;
+    background-color: var(--color-white);
+
+    @include tablet {
+      //max-width: 100%;
+      //align-self: start;
+      right: 10px;
+    }
+
+    @media all and (max-width: 835px) {
+      position: static;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    @include tablet {
+      font-size: 28px;
+    }
+  }
+
+  &__btns-block {
+    display: flex;
+    align-items: center;
+    height: 116px;
+  }
+
+  &__slide {
+    width: 350px;
+    height: 606px;
+    display: flex;
+    align-items: flex-end;
+
+    @media all and (max-width: 835px) {
+      align-items: start;
+      height: auto;
+    }
+
+    @include mobile {
+      max-width: 300px;
+    }
+
+    &--first {
+      width: 445px;
+    }
+
+    &--last {
+      width: 230px;
+    }
+  }
+}

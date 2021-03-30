@@ -1,0 +1,150 @@
+.news {
+  padding: 60px 0 96px;
+  background-color: var(--color-gray1);
+
+
+  &__header {
+    margin-bottom: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @media all and (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: var(--color-white);
+
+    @include mobile {
+      grid-column: 1/3;
+    }
+    &--custom {
+      display: flex;
+      grid-column: 1/3;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 103px;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 237px;
+      background: rgba(223, 223, 223, 0.7);
+      filter: blur(44px);
+    }
+  }
+
+  &__pic,
+  &__pic-custom {
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__item-content {
+    padding: 33px;
+    max-width: 380px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__item-custom-title {
+    margin-bottom: 24px;
+    font-family: "Lora", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+
+    @include mobile {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+
+  &__item-custom-text {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-gray2);
+  }
+
+  &__user-info {
+    display: flex;
+  }
+
+  &__user-avatar {
+    margin-right: 23px;
+  }
+
+  &__user-data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user-name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color-dark-blue);
+  }
+
+  &__user-profession {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-gray2);
+  }
+
+  &__item-title {
+    padding: 0 16px;
+    margin: 14px 0 4px;
+    font-family: "Lora", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  &__item-author {
+    margin-bottom: 16px;
+    padding: 0 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-gray2);
+  }
+}

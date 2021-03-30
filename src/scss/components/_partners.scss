@@ -1,0 +1,51 @@
+.partners {
+  margin-bottom: 127px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: #0d2c4a;
+  }
+
+  &__text {
+    margin-bottom: 70px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color-gray2);
+  }
+
+  &__icons-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media all and (max-width: 470px) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    margin-right: 40px;
+    margin-bottom: 30px;
+
+    @media all and (max-width: 470px) {
+      margin-right: 0;
+    }
+  }
+}

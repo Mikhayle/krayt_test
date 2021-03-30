@@ -1,0 +1,43 @@
+.hero {
+  margin-bottom: 114px;
+
+  @include tablet {
+    margin-bottom: 60px;
+  }
+
+ &__content {
+   margin-bottom: 33px;
+   display: flex;
+
+   @include mobile {
+     flex-direction: column;
+   }
+ }
+
+  &__title {
+    flex: 1 1 60%;
+    font-family: "Lora", sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 67px;
+
+    @include mobile {
+      margin-bottom: 30px;
+      font-size: 42px;
+      line-height: 56px;
+    }
+
+    & span {
+      color: #dd2c00;
+    }
+  }
+
+  &__text {
+    flex: 1 1 30%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #6A6A6A;
+
+  }
+}

@@ -1,0 +1,25 @@
+@import "mixins";
+// COLORS
+:root {
+  --color-bg: #e5e5e5;
+  --color-bg2: #f8f8f8;
+  --color-black: #222831;
+  --color-white: #fff;
+  --color-gray1: #f8f8f8;
+  --color-gray2: #9a9a9a;
+  --color-red: #ff5722;
+  --color-dark-blue: #10375c;
+}
+
+//
+
+:root {
+  --burger-width: 42px;
+  --burger-height: 36px;
+  --burger-line-height: 3px;
+  @include mobile {
+    --burger-width: 32px;
+    --burger-height: 28px;
+    --burger-line-height: 2px;
+  }
+}

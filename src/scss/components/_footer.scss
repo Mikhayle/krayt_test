@@ -1,0 +1,143 @@
+.footer {
+  padding-top: 56px;
+  padding-bottom: 102px;
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 125px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      margin-bottom: 40px;
+      max-width: 40%;
+    }
+
+    @include mobile {
+      max-width: 70%;
+    }
+  }
+
+  &__menu {
+    grid-column: 2/5;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+
+  &__logo-link {
+    margin-bottom: 16px;
+    font-family: "Lora", sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 67px;
+    color: var(--color-white);
+  }
+
+  &__info-text {
+    margin-bottom: 26px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-gray1);
+  }
+
+  &__socials {
+    display: flex;
+
+    &-item:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: transform 0.3s ease-in-out;
+
+      @include desktop {
+        &:hover {
+          transform: translateY(5px);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      &--instagram {
+        background-image: url('../img/instagram.svg');
+      }
+
+      &--youtube {
+        background-image: url('../img/youtube.svg');
+      }
+
+      &--facebook {
+        background-image: url('../img/facebook.svg');
+      }
+    }
+  }
+
+  //&__menu-item:not(:last-child) {
+  //  margin-right: 68px;
+  //}
+
+  &__menu-item {
+    flex-shrink: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__menu-item-title {
+    margin-bottom: 24px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    opacity: 0.5;
+  }
+
+  &__menu-list-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__menu-link {
+    color: var(--color-white);
+    transition: text-shadow 0.2s ease-in-out;
+
+    @include desktop {
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        transition: text-shadow 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &__adress-part {
+    display: block;
+    margin-left: 20px;
+  }
+}

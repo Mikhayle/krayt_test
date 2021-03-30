@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+  <title>Krayt test task</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="site-container">
+		@include('partials/header.html')
+		<main class="main">
+      @include('partials/hero.html')
+      @include('partials/spaces.html')
+      @include('partials/why.html')
+      @include('partials/facilities.html')
+      @include('partials/gallery.html')
+      @include('partials/partners.html')
+      @include('partials/reviews.html')
+      @include('partials/help.html')
+      @include('partials/news.html')
+		</main>
+    	@include('partials/footer.html')
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+  <script>
+    const swiper0 = new Swiper('.swiper-container--0', {
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination--0',
+      },
+    });
+
+    const swiper1 = new Swiper('.swiper-container--1', {
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          autoHeight: true,
+        },
+        576: {
+          slidesPerView: 2,
+        },
+        920: {
+          slidesPerView: 3,
+        }
+      },
+      scrollbar: {
+        el: `.swiper-scrollbar--1`,
+        // snapOnRelease: true,
+        dragSize: 40,
+      },
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination--1',
+        type: 'fraction',
+        formatFractionCurrent: (index) => {
+          return `0${index}`;
+        },
+        formatFractionTotal: (index) => {
+          return `0${index}`;
+        }
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next--1',
+        prevEl: '.swiper-button-prev--1',
+      },
+    });
+
+    const swiper2 = new Swiper('.swiper-container--2', {
+      // Optional parameters
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 'auto',
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        340: {
+          slidesPerView: 'auto',
+        },
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next--2',
+        prevEl: '.swiper-button-prev--2',
+      },
+    });
+
+    const swiper3 = new Swiper('.swiper-container--3', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+        },
+        576: {
+          slidesPerView: 'auto'
+        }
+      },
+
+      scrollbar: {
+        el: `.swiper-scrollbar--3`,
+        dragSize: 40,
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next--3',
+        prevEl: '.swiper-button-prev--3',
+      },
+    });
+  </script>
+</body>
+</html>
